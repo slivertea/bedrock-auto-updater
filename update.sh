@@ -12,6 +12,8 @@ if [ "$EUID" -ne 0 ];then
 else
   echo "[INFO]  sudo check passed"
 fi
+echo "[WARN] Did you use sudo -E ?"
+pause
 
 echo "[MSG] Purging stale candidates..."
 rm -rf candidate.zip
