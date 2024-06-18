@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+# run with "sudo -E bash update.sh"
 
 
 BASEURI='https://minecraft.azureedge.net/bin-linux/'
