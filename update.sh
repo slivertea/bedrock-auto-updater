@@ -31,13 +31,14 @@ unzip candidate.zip -d candidate/
 
 # Bounce and Move candidate to running
 # minecraftStop
-#SERSTAT=$(sudo systemctl status minecraft.service | grep Active)
+SERSTAT=$(sudo systemctl status minecraft.service | grep Active)
 echo "[INFO]  Service Starting State:"
-#echo "[INFO]  ${SERSTAT}"
+echo "[INFO]  ${SERSTAT}"
 echo "[MSG] Stopping the minecraft service:"
-#SERSTOP=$(systemctl stop minecraft.service)
-#SERSTAT=$(sudo systemctl status minecraft.service | grep Active)
-#echo "[INFO]  ${SERSTAT}"
+SERSTOP=$(systemctl stop minecraft.service)
+SERSTAT=$(sudo systemctl status minecraft.service | grep Active)
+echo "[INFO]  ${SERSTAT}"
+
 
 # minecraftMove
 echo "[MSG] Reticulating Splines...."
@@ -62,9 +63,9 @@ done
 
 # minecraftStart
 echo "[MSG] Starting the minecraft service:"
-#SERSTART=$(systemctl start minecraft.service)
-#SERSTAT=$(sudo systemctl status minecraft.service | grep Active)
-#echo "[INFO]  ${SERSTAT}"
+SERSTART=$(systemctl start minecraft.service)
+SERSTAT=$(sudo systemctl status minecraft.service | grep Active)
+echo "[INFO]  ${SERSTAT}"
 #
 
 
